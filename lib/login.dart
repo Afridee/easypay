@@ -1,3 +1,4 @@
+import 'package:easypay/home.dart';
 import 'package:easypay/registration_1.dart';
 import 'package:easypay/widgets/defTextField.dart';
 import 'package:flutter/cupertino.dart';
@@ -55,16 +56,23 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: 20,
             ),
-            Container(
-              width: 120,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Color(0xffD2E063)
-              ),
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text("Login"),
+            InkWell(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                  return const Home();
+                }));
+              },
+              child: Container(
+                width: 120,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color(0xffD2E063)
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Login"),
+                  ),
                 ),
               ),
             ),
